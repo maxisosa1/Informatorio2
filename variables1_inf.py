@@ -29,3 +29,20 @@ for n in tupla:
 print(suma)
 
 #NUEVOS CAMBIOS PARA GIT
+
+#CON NOTAS DETERMINADAS
+notas = [6,8,8,8,9]
+suma = 0
+for n in notas:
+    suma += n
+print("Promedio: ", suma/len(notas))
+
+
+#CON NOTAS DEFINIDAS POR EL USUARIO 
+cant_notas = int(input("Cantidad de notas: "))
+notas = []
+suma = 0
+for n in range(1, cant_notas + 1):
+    notas.append(int(input("Dime tu nota: ")))
+
+print("Promedio: ", sum(notas)/cant_notas)
