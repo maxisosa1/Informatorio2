@@ -38,11 +38,11 @@ for n in notas:
 print("Promedio: ", suma/len(notas))
 
 
-#CON NOTAS DEFINIDAS POR EL USUARIO 
-cant_notas = int(input("Cantidad de notas: "))
-notas = []
-suma = 0
-for n in range(1, cant_notas + 1):
-    notas.append(int(input("Dime tu nota: ")))
+#CON FACTURAS DEFINIDAS POR EL USUARIO 
+cant_fact = int(input("Cantidad de facturas: "))
+facturas = []
 
-print("Promedio: ", sum(notas)/cant_notas)
+for n in range(1, cant_fact + 1):
+    facturas.append(int(input("Dime tu facturas: ")))
+
+print("Promedio facturas: ", sum(facturas)/cant_fact)
