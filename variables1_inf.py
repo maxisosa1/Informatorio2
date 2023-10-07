@@ -1,48 +1,51 @@
+palabra = input("Dame una palabra: ")
+for letra in palabra:
+    print(letra)
 
-dicc = {"fruta1" : "manzana", "fruta2" : "pera", "fruta3" : "frutilla"}
-print(dicc)
-
-dic2 = {"ciudad1" : "Paris", "ciudad2" : "Nueva York", "ciudad3" : "Buenos Aires"} 
-dic2["ciudad4"] = "Resistencia"
-print(dic2)
-
-print(dic2["ciudad2"])
-
-set1 = {1,2,3,4,5,6,7,8,9,10}
-print(max(set1))
-
-set1 = (1,3,5,7,9)
-print(len(set1))
-
-lista1  = [1,2,3,4,5,6,7,8,9,10]
-
-print(lista1[: -1 ])
-
-lista2 = ["pera", "manzana", "aguacate"]
-lista2.remove("manzana")
-print(lista2)
-
-tupla = (1,2,3,4,5)
+numero = int(input("Dame un número: "))
+contador = 1
 suma = 0
-for n in tupla:
+while contador <= numero:
+    suma += contador
+    contador += 1
+print(suma)
+
+contador = 1
+while contador <= 10:
+    print(numero*contador)
+    contador += 1
+
+numero = 100
+contador = 1
+lista = []
+for n in range(101):
+    if n % 2 == 0:
+        lista.append(n)
+print(lista)
+
+suma = 0
+for n in lista:
     suma += n
 print(suma)
 
-#NUEVOS CAMBIOS PARA GIT
+# Solicita al usuario una palabra
+palabra = input("Ingrese una palabra: ")
 
-#CON NOTAS DETERMINADAS
-notas = [6,8,8,8,9]
-suma = 0
-for n in notas:
-    suma += n
-print("Promedio: ", suma/len(notas))
+# Convierte la palabra a minúsculas para que la comparación sea insensible a mayúsculas
+palabra = palabra.lower()
 
+# Invierte la palabra utilizando el operador de slicing [::-1]
+palabra_invertida = palabra[::-1]
 
-#CON FACTURAS DEFINIDAS POR EL USUARIO 
-cant_fact = int(input("Cantidad de facturas: "))
-facturas = []
+# Comprueba si la palabra original es igual a la palabra invertida
+if palabra == palabra_invertida:
+    print("La palabra es un palíndromo.")
+else:
+    print("La palabra no es un palíndromo.")
 
-for n in range(1, cant_fact + 1):
-    facturas.append(int(input("Dime tu facturas: ")))
-
-print("Promedio facturas: ", sum(facturas)/cant_fact)
+frase = input("Dame una frase: ")
+contador = 0
+for n in frase:
+    if n == " ":
+        contador += 1
+print(contador + 1)
